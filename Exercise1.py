@@ -1,4 +1,4 @@
-# Ian McLoughlin
+# Marion McGowan
 # A program that displays Fibonacci numbers.
 def fib(n):
   """This function returns the nth Fibonacci number."""
@@ -16,3 +16,5 @@ def fib(n):
 x =13
 ans = fib(x)
 print("Fibonacci number", x, "is", ans)
+
+# My name is Marion. So the first and last letters of my name (M+N=13+14) sum to 27. The 27th Fibonacci number is 196418.
