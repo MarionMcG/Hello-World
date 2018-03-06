@@ -5,10 +5,9 @@
 def factorial(number):
     factorial=1
     number=number+1
-    for i in range (1, 1*number):
+    for i in range (1, number):
         factorial=factorial*i
     return factorial
-
 
 print(factorial(5))
 print(factorial(7))
