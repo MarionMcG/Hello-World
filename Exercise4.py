@@ -1,6 +1,8 @@
 
 #Marion McGowan 01/03/2018
 #Project Euler Problem 5 - Solution 1
+
+#FIRST ATTEMPT
 import time
 start_time = time.time()
 # Researched code to return time it took my program to run here, https://stackoverflow.com/questions/1557571/how-do-i-get-time-of-a-python-programs-execution
@@ -26,5 +28,27 @@ print("My program took %s seconds to run" % int(time.time() - start_time))
 #I struggled with this problem and was unable to generalise it
 #I tried this; for p in range(21,max): for r in range(2, 21): 
 #               if p%r==0: print (p)
-#This method didnt correctly iterate through the range
-#Need to figure out how to iterate a loop over a range of values
+#Need to figure out how to generalise this problem.
+
+
+#SECOND ATTEMPT 06/03/2018
+import time
+start_time = time.time()
+
+def prod(numbers):
+    prod=1
+    for i in range (1, numbers):
+        prod =prod*i
+    return prod
+
+max = (prod(21))
+for f in range (20, max, 2):
+    if (f%20==0) and (f%19==0) and (f%18==0) and (f%17==0) and (f%16==0) and (f%15==0) and (f%14==0) and (f%13==0) and (f%11==0):
+        print("The LCM of all numbers from 1 to 20 is",f)
+        break
+
+print("My program took %s seconds to run" % int(time.time() - start_time))
+
+#I optimised the original program so that it runs faster. I only looked at even numbers between 20 and 20!. 
+#I also noticed that I only need to find LCM of 20, 19, 18, 17, 16, 15, 14, 12 and 11.
+#Unsure of the mathematical reason behind why I don't need to include factors 0 - 10. More research needed.
